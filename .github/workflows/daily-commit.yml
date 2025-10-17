@@ -14,11 +14,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Update File and Commit
-        run: |
-          echo "Last updated at $(date -u +'%Y-%m-%d %H:%M:%S UTC')" > update.txt
-          git config user.name "GitHub Action"
-          git config user.email "24f1000043@ds.study.iitm.ac.in"
-          git add update.txt
-          git commit -m "Automated daily update at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          git push
+      - name: Echo Test
+        run: echo "hello there"
